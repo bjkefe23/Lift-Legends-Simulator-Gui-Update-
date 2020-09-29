@@ -414,7 +414,7 @@ BuyPetUpgradeSell.MouseButton1Down:Connect(function()
 		buy = true
 		BuyPetUpgradeSell.Text = "[ON]BuyPet/Upgrade/Sell"
 		while buy do
-			wait()
+			wait(1)
 			game.ReplicatedStorage.Network.Port1:FireServer("PurchaseCrate","Tier7",1)
 			
 			game.ReplicatedStorage.Network.Port1:FireServer("DeleteRarity","Common")
