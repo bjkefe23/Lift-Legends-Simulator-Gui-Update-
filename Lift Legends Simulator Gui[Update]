@@ -1,0 +1,428 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local LiftLegendsSimulator = Instance.new("TextLabel")
+local AutoStrength = Instance.new("TextButton")
+local AutoSpeed = Instance.new("TextButton")
+local AutoVitality = Instance.new("TextButton")
+local AutoFist = Instance.new("TextButton")
+local AutoBuyWeight = Instance.new("TextButton")
+local AutoBuyEndurance = Instance.new("TextButton")
+local AutoRebirth = Instance.new("TextButton")
+local AutoSell = Instance.new("TextButton")
+local AutoBuyAreas = Instance.new("TextButton")
+local MadeByefeeee8151 = Instance.new("TextLabel")
+local Frame2 = Instance.new("Frame")
+local LiftLegendsSimulator_2 = Instance.new("TextLabel")
+local MadeByefeeee851 = Instance.new("TextLabel")
+local ReedemCodes = Instance.new("TextButton")
+local FreeGamePass = Instance.new("TextButton")
+local GetAllBadges = Instance.new("TextButton")
+local DestroyGui = Instance.new("TextButton")
+local BuyPetUpgradeSell = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.Position = UDim2.new(0.172839507, 0, 0.0242290758, 0)
+Frame.Size = UDim2.new(0, 119, 0, 364)
+Frame.Visible = true
+Frame.Active = true
+Frame.Draggable = true
+
+LiftLegendsSimulator.Name = "Lift Legends Simulator"
+LiftLegendsSimulator.Parent = Frame
+LiftLegendsSimulator.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LiftLegendsSimulator.Position = UDim2.new(0, 0, -0.00182000129, 0)
+LiftLegendsSimulator.Size = UDim2.new(0, 118, 0, 33)
+LiftLegendsSimulator.Font = Enum.Font.SourceSans
+LiftLegendsSimulator.Text = "Lift Legends Simulator"
+LiftLegendsSimulator.TextColor3 = Color3.fromRGB(255, 255, 255)
+LiftLegendsSimulator.TextSize = 14.000
+
+AutoStrength.Name = "Auto Strength"
+AutoStrength.Parent = Frame
+AutoStrength.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AutoStrength.Position = UDim2.new(0, 0, 0.0881438106, 0)
+AutoStrength.Size = UDim2.new(0, 119, 0, 30)
+AutoStrength.Font = Enum.Font.GothamBlack
+AutoStrength.Text = "Auto Strength"
+AutoStrength.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoStrength.TextSize = 12.000
+AutoStrength.MouseButton1Down:Connect(function()
+	if on == false then 
+		on = true
+		AutoStrength.Text = "[ON]Auto Strength"
+		while on do
+			wait()
+			game.ReplicatedStorage.Network.Port1:FireServer("Click")
+		end
+	else
+		on = false
+		AutoStrength.Text = "[OFF]Auto Strength"
+	end
+end)
+AutoSpeed.Name = "Auto Speed"
+AutoSpeed.Parent = Frame
+AutoSpeed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AutoSpeed.Position = UDim2.new(0, 0, 0.170263499, 0)
+AutoSpeed.Size = UDim2.new(0, 119, 0, 30)
+AutoSpeed.Font = Enum.Font.GothamBlack
+AutoSpeed.Text = "Auto Speed"
+AutoSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoSpeed.TextSize = 14.000
+AutoSpeed.MouseButton1Down:Connect(function()
+	if onn == false then 
+		onn = true
+		AutoSpeed.Text = "[ON]Auto Speed"
+		while onn do
+			wait()
+			game.ReplicatedStorage.Network.Port1:FireServer("Running")
+		end
+	else
+		onn = false
+		AutoSpeed.Text = "[OFF]Auto Speed"	
+	end	
+end)
+
+
+AutoVitality.Name = "Auto Vitality"
+AutoVitality.Parent = Frame
+AutoVitality.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AutoVitality.Position = UDim2.new(0, 0, 0.25513044, 0)
+AutoVitality.Size = UDim2.new(0, 119, 0, 30)
+AutoVitality.Font = Enum.Font.GothamBlack
+AutoVitality.Text = "Auto Vitality"
+AutoVitality.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoVitality.TextSize = 14.000
+AutoVitality.MouseButton1Down:Connect(function()
+	if onnn == false then 
+		onnn = true
+		AutoVitality.Text = "[ON]Auto Vitality"
+		while onnn do
+			wait()
+			game.ReplicatedStorage.Network.Port1:FireServer("Vitality")
+		end
+	else
+		onnn = false
+		AutoVitality.Text = "[OFF]Auto Vitality"
+	end
+end)
+
+AutoFist.Name = "Auto Fist"
+AutoFist.Parent = Frame
+AutoFist.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AutoFist.Position = UDim2.new(0, 0, 0.33698532, 0)
+AutoFist.Size = UDim2.new(0, 119, 0, 30)
+AutoFist.Font = Enum.Font.GothamBlack
+AutoFist.Text = "Auto Fist"
+AutoFist.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoFist.TextSize = 14.000
+AutoFist.MouseButton1Down:Connect(function()
+	if onnnn == false then 
+		onnnn = true
+		AutoFist.Text = "[ON]Auto Fist"
+		while onnnn do
+			wait()
+			
+			game.ReplicatedStorage.Network.Port1:FireServer("Punching",game.Workspace.PowerTrainingFolder.Model)
+		end
+	else
+		onnnn = false
+		AutoFist.Text = "[OFF]Auto Fist"
+	end
+end)
+
+AutoBuyWeight.Name = "Auto Buy Weight"
+AutoBuyWeight.Parent = Frame
+AutoBuyWeight.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AutoBuyWeight.Position = UDim2.new(0, 0, 0.419104993, 0)
+AutoBuyWeight.Size = UDim2.new(0, 119, 0, 30)
+AutoBuyWeight.Font = Enum.Font.GothamBlack
+AutoBuyWeight.Text = "Auto Buy Weight"
+AutoBuyWeight.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoBuyWeight.TextSize = 10.000
+AutoBuyWeight.MouseButton1Down:Connect(function()
+	if one == false then 
+		one = true
+		AutoBuyWeight.Text = "[ON]Auto Buy Weight"
+		while one do
+			wait()
+			game.ReplicatedStorage.Network.Port1:FireServer("PurchaseAll","Strength")
+			
+		end
+	else
+		one = false
+		AutoBuyWeight.Text = "[OFF]Auto Buy Weight"
+	end
+end)
+
+
+AutoBuyEndurance.Name = "Auto Buy Endurance"
+AutoBuyEndurance.Parent = Frame
+AutoBuyEndurance.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AutoBuyEndurance.Position = UDim2.new(9.31322575e-10, 0, 0.501224697, 0)
+AutoBuyEndurance.Size = UDim2.new(0, 119, 0, 30)
+AutoBuyEndurance.Font = Enum.Font.GothamBlack
+AutoBuyEndurance.Text = "Auto Buy Endurance"
+AutoBuyEndurance.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoBuyEndurance.MouseButton1Down:Connect(function()
+	if onee == false then 
+		onee = true
+		AutoBuyEndurance.Text = "[ON]Auto Buy Endurance"
+		while onee do
+			wait()
+			game.ReplicatedStorage.Network.Port1:FireServer("Purchase","Endurance")
+			
+		end
+	else
+		onee = false
+		AutoBuyEndurance.Text = "[OFF]Auto Buy Endurance"
+	end
+end)
+
+AutoRebirth.Name = "Auto Rebirth"
+AutoRebirth.Parent = Frame
+AutoRebirth.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AutoRebirth.Position = UDim2.new(9.31322575e-10, 0, 0.58334434, 0)
+AutoRebirth.Size = UDim2.new(0, 119, 0, 30)
+AutoRebirth.Font = Enum.Font.GothamBlack
+AutoRebirth.Text = "Auto Rebirth"
+AutoRebirth.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoRebirth.TextSize = 12.000
+AutoRebirth.MouseButton1Down:Connect(function()
+	if oneee == false then 
+		oneee = true
+		AutoRebirth.Text = "[ON]Auto Rebirth"
+		while oneee do
+			wait()
+			
+			game:GetService"ReplicatedStorage".Network.Port1:FireServer("Purchase","Rank")
+		end
+	else
+		oneee = false
+		AutoRebirth.Text = "[OFF]Auto Rebirth"
+	end	
+end)
+
+AutoSell.Name = "Auto Sell"
+AutoSell.Parent = Frame
+AutoSell.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AutoSell.Position = UDim2.new(9.31322575e-10, 0, 0.665464044, 0)
+AutoSell.Size = UDim2.new(0, 119, 0, 30)
+AutoSell.Font = Enum.Font.GothamBlack
+AutoSell.Text = "Auto Sell"
+AutoSell.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoSell.TextSize = 12.000
+AutoSell.MouseButton1Down:Connect(function()
+	if buy == false then 
+		buy = true
+		AutoSell.Text = "[ON]Auto Sell"
+		while buy do
+			wait()
+			game.ReplicatedStorage.Network.Port1:FireServer("SellEnergy")
+		end
+	else
+		buy = false
+		AutoSell.Text = "[OFF]Auto Sell"
+	end
+end)
+
+AutoBuyAreas.Name = "Auto Buy Areas"
+AutoBuyAreas.Parent = Frame
+AutoBuyAreas.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+AutoBuyAreas.Position = UDim2.new(9.31322575e-10, 0, 0.747583807, 0)
+AutoBuyAreas.Size = UDim2.new(0, 119, 0, 30)
+AutoBuyAreas.Font = Enum.Font.GothamBlack
+AutoBuyAreas.Text = "Auto Buy Areas"
+AutoBuyAreas.TextColor3 = Color3.fromRGB(255, 255, 255)
+AutoBuyAreas.TextSize = 12.000
+AutoBuyAreas.MouseButton1Down:Connect(function()
+if buyy == false then 
+		buyy = true
+		AutoBuyAreas.Text = "[ON]Auto Buy Areas"
+		while buyy do
+			wait()
+			for i,v in pairs(game:GetDescendants()) do
+			    if v.Name == "TouchInterest" and v.Parent:FindFirstChild("AreaID") then
+			        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Parent,0)
+			        wait()
+			        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart,v.Parent,1)
+			    end
+		        end
+			        
+			
+		end
+	else
+		buyy = false
+		AutoBuyAreas.Text = "[OFF]Auto Buy Areas"
+	end
+end)
+
+MadeByefeeee8151.Name = "Made By efeeee#8151"
+MadeByefeeee8151.Parent = Frame
+MadeByefeeee8151.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MadeByefeeee8151.Position = UDim2.new(-6.05359674e-08, 0, 0.90937376, 0)
+MadeByefeeee8151.Size = UDim2.new(0, 118, 0, 32)
+MadeByefeeee8151.Font = Enum.Font.SourceSans
+MadeByefeeee8151.Text = "Made By: efeeee#8151"
+MadeByefeeee8151.TextColor3 = Color3.fromRGB(255, 255, 255)
+MadeByefeeee8151.TextSize = 14.000
+
+Frame2.Name = "Frame 2"
+Frame2.Parent = ScreenGui
+Frame2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame2.Position = UDim2.new(0.417610228, 0, 0.0241381451, 0)
+Frame2.Size = UDim2.new(0, 119, 0, 211)
+Frame2.Visible = true
+Frame2.Active = true
+Frame2.Draggable = true
+
+
+
+LiftLegendsSimulator_2.Name = "Lift Legends Simulator"
+LiftLegendsSimulator_2.Parent = Frame2
+LiftLegendsSimulator_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LiftLegendsSimulator_2.Position = UDim2.new(0.00840330124, 0, 0.00473934412, 0)
+LiftLegendsSimulator_2.Size = UDim2.new(0, 118, 0, 33)
+LiftLegendsSimulator_2.Font = Enum.Font.SourceSans
+LiftLegendsSimulator_2.Text = "Lift Legends Simulator"
+LiftLegendsSimulator_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+LiftLegendsSimulator_2.TextSize = 14.000
+
+MadeByefeeee851.Name = "Made By:efeeee#851"
+MadeByefeeee851.Parent = Frame2
+MadeByefeeee851.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+MadeByefeeee851.Position = UDim2.new(0.00840330124, 0, 0.843601882, 0)
+MadeByefeeee851.Size = UDim2.new(0, 118, 0, 33)
+MadeByefeeee851.Font = Enum.Font.SourceSans
+MadeByefeeee851.Text = "Made By:efeeee#8151"
+MadeByefeeee851.TextColor3 = Color3.fromRGB(255, 255, 255)
+MadeByefeeee851.TextSize = 14.000
+
+ReedemCodes.Name = "Reedem Codes"
+ReedemCodes.Parent = Frame2
+ReedemCodes.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ReedemCodes.Position = UDim2.new(0, 0, 0.156398103, 0)
+ReedemCodes.Size = UDim2.new(0, 119, 0, 30)
+ReedemCodes.Font = Enum.Font.GothamBlack
+ReedemCodes.Text = "Reedem Codes"
+ReedemCodes.TextColor3 = Color3.fromRGB(255, 255, 255)
+ReedemCodes.TextSize = 14.000
+ReedemCodes.MouseButton1Down:Connect(function()
+	for i,v in pairs(game:GetService("ReplicatedStorage").Codes:GetDescendants()) do
+		if v.ClassName == "BoolValue" then
+			game.ReplicatedStorage.Network.Port1:FireServer("Code",v.Name)
+		end
+	end
+end)
+
+FreeGamePass.Name = "Free GamePass"
+FreeGamePass.Parent = Frame2
+FreeGamePass.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FreeGamePass.Position = UDim2.new(0, 0, 0.298578203, 0)
+FreeGamePass.Size = UDim2.new(0, 119, 0, 30)
+FreeGamePass.Font = Enum.Font.GothamBlack
+FreeGamePass.Text = "FreeGamePass"
+FreeGamePass.TextColor3 = Color3.fromRGB(255, 255, 255)
+FreeGamePass.TextSize = 14.000
+FreeGamePass.MouseButton1Down:Connect(function()
+	local gamepass1 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.AutoBuy
+	local gamepass2 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.AutoRank
+	local gamepass3 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.AutoClick
+	local gamepass4 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.ZoneUnlock
+	local gamepass5 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Gamepass.FastLifting
+	gamepass1.Value = true
+	wait(.9)
+	gamepass2.Value = true
+	wait(.9)
+	gamepass3.Value = true
+	wait(.9)
+	gamepass4.Value = true
+	wait(.9)
+	gamepass5.Value = true
+end)
+
+GetAllBadges.Name = "Get All Badges"
+GetAllBadges.Parent = Frame2
+GetAllBadges.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GetAllBadges.Position = UDim2.new(0, 0, 0.440758288, 0)
+GetAllBadges.Size = UDim2.new(0, 119, 0, 30)
+GetAllBadges.Font = Enum.Font.GothamBlack
+GetAllBadges.Text = "Get All Badges"
+GetAllBadges.TextColor3 = Color3.fromRGB(255, 255, 255)
+GetAllBadges.TextSize = 14.000
+GetAllBadges.MouseButton1Down:Connect(function()
+	local badge1 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Badge.Strength1
+	local badge2 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Badge.Strength2
+	local badge3 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Badge.Strength3
+	local badge4 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Badge.Kill4
+	local badge5 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Badge.Kill3
+	local badge6 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Badge.Kill2
+	local badge7 = game:GetService"ReplicatedStorage".Players[game.Players.LocalPlayer.Name].Badge.Kill1
+	badge1.Value = true
+	wait(.9)
+	badge2.Value = true
+	wait(.9)
+	badge3.Value = true
+	wait(.9)
+	badge4.Value = true
+	wait(.9)
+	badge5.Value = true
+	wait(.9)
+	badge6.Value = true
+	wait(.9)
+	badge7.Value = true
+	wait(.9)
+end)
+
+
+DestroyGui.Name = "Destroy Gui"
+DestroyGui.Parent = Frame2
+DestroyGui.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+DestroyGui.Position = UDim2.new(0.00840336177, 0, 0.582938373, 0)
+DestroyGui.Size = UDim2.new(0, 118, 0, 55)
+DestroyGui.Font = Enum.Font.GothamBlack
+DestroyGui.Text = "Destroy Gui"
+DestroyGui.TextColor3 = Color3.fromRGB(255, 255, 255)
+DestroyGui.TextSize = 14.000
+DestroyGui.MouseButton1Down:Connect(function()
+	Frame.Visible = false
+	Frame.Active  = false
+	Frame2.Visible = false
+	Frame2.Active = false
+end)
+
+
+BuyPetUpgradeSell.Name = "BuyPet/Upgrade/Sell"
+BuyPetUpgradeSell.Parent = Frame
+BuyPetUpgradeSell.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BuyPetUpgradeSell.Position = UDim2.new(9.31322575e-10, 0, 0.824506879, 0)
+BuyPetUpgradeSell.Size = UDim2.new(0, 119, 0, 30)
+BuyPetUpgradeSell.Font = Enum.Font.GothamBlack
+BuyPetUpgradeSell.Text = "BuyPet/Upgrade/Sell"
+BuyPetUpgradeSell.TextColor3 = Color3.fromRGB(255, 255, 255)
+BuyPetUpgradeSell.MouseButton1Down:Connect(function()
+	if buy == false then 
+		buy = true
+		BuyPetUpgradeSell.Text = "[ON]BuyPet/Upgrade/Sell"
+		while buy do
+			wait()
+			game.ReplicatedStorage.Network.Port1:FireServer("PurchaseCrate","Tier7",1)
+			
+			game.ReplicatedStorage.Network.Port1:FireServer("DeleteRarity","Common")
+			
+			game.ReplicatedStorage.Network.Port1:FireServer("Evolve")
+		end
+	else
+		buy = false
+		BuyPetUpgradeSell.Text = "[OFF]BuyPet/Upgrade/Sell"
+	end
+end)
